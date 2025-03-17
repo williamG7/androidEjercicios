@@ -91,12 +91,13 @@ fun calculadoraIMC(){
         val edad = Calendar.getInstance().get(Calendar.YEAR) - anyo!!
         val imc = pesoKg!! / (alturaMetros!! * alturaMetros)
 
-        val categoriaIMC = ""
-        when(categoriaIMC){
+        val categoriaIMC = when{
             imc < 18.5 -> "Peso insuficiente"
             imc in 18.5..24.9 -> "Peso normal"
             imc in 25.0..29.9 -> "Sobrepeso"
+            else -> "Obesidad"
         }
+
 
 
     }) {
