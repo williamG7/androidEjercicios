@@ -39,19 +39,15 @@ class MainActivity : ComponentActivity() {
                         name = "word",
                         modifier = Modifier.padding(innerPadding)
                     )
-                    ejercicio3(
+                    Ejercicio3(
                         name = "3",
                         modifier = Modifier.padding(innerPadding).toString()
                     )
-                    ejercicio4(
+                    Ejercicio4(
                         name = "4",
                         modifier = Modifier.padding(innerPadding)
                     )
-                    CalcularPropina(
-                        name = "5",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-
+                    CalcularPropina()
                 }
             }
         }
@@ -89,7 +85,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun ejercicio3(name: String, modifier: String){
+fun Ejercicio3(name: String, modifier: String){
     Column(Modifier.fillMaxSize()) {
         Row(
             Modifier
@@ -185,7 +181,7 @@ fun ejercicio3(name: String, modifier: String){
 
 
 @Composable
-fun ejercicio4(name: String, modifier: Modifier = Modifier) {
+fun Ejercicio4(name: String, modifier: Modifier = Modifier) {
     ConstraintLayout(modifier.fillMaxSize()) {
         val (boxRed, boxYellow, boxGreen, boxCyan, boxMagenta) = createRefs()
         Box(modifier = Modifier.size(120.dp).background(Color.Red).constrainAs(boxRed) {
@@ -218,7 +214,7 @@ fun ejercicio4(name: String, modifier: Modifier = Modifier) {
 fun GreetingPreview() {
     MyApplicationTheme {
         Greeting("Android")
-        ejercicio3("4","completado")
-        ejercicio4("compeltado")
+        Ejercicio3("4","completado")
+        Ejercicio4("compeltado")
     }
 }

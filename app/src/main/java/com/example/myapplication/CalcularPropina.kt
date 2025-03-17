@@ -11,9 +11,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.text.input.KeyboardType
-import com.example.tipcalcular.ui.theme.TipCalculatorTheme
 
-class CalcularPropina(name: String, modifier: Modifier) : ComponentActivity() {
+
+class CalcularPropina() : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -46,33 +46,33 @@ fun TipCalculatorApp() {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Text("Calculadora de Propina", style = MaterialTheme.typography.h5)
+           // Text("Calculadora de Propina", style = MaterialTheme.typography.h5)
 
             Spacer(modifier = Modifier.height(16.dp))
 
             // Menu price input
-            TextField(
-                value = menuPrice,
-                onValueChange = { menuPrice = it },
-                label = { Text("Precio del Menú") },
-                keyboardOptions = androidx.compose.ui.text.input.KeyboardOptions.Default.copy(
-                    keyboardType = KeyboardType.Number
-                ),
-                modifier = Modifier.fillMaxWidth()
-            )
+           // TextField(
+            //    value = menuPrice,
+             //   onValueChange = { menuPrice = it },
+              //  label = { Text("Precio del Menú") },
+                //keyboardOptions = androidx.compose.ui.text.input.KeyboardOptions.Default.copy(
+            //        keyboardType = KeyboardType.Number
+              //  ),
+                //modifier = Modifier.fillMaxWidth()
+          //  )
 
             Spacer(modifier = Modifier.height(16.dp))
 
             // Tip percentage input
-            TextField(
-                value = tipPercentage,
-                onValueChange = { tipPercentage = it },
-                label = { Text("Porcentaje de Propina") },
-                keyboardOptions = androidx.compose.ui.text.input.KeyboardOptions.Default.copy(
-                    keyboardType = KeyboardType.Number
-                ),
-                modifier = Modifier.fillMaxWidth()
-            )
+           // TextField(
+            //    value = tipPercentage,
+            //    onValueChange = { tipPercentage = it },
+              //  label = { Text("Porcentaje de Propina") },
+              //  keyboardOptions = androidx.compose.ui.text.input.KeyboardOptions.Default.copy(
+            //        keyboardType = KeyboardType.Number
+              //  ),
+               // modifier = Modifier.fillMaxWidth()
+           // )
 
             Spacer(modifier = Modifier.height(16.dp))
 
@@ -84,14 +84,19 @@ fun TipCalculatorApp() {
             Spacer(modifier = Modifier.height(16.dp))
 
             // Show result
-            Text("Propina: %.2f".format(tipAmount), style = MaterialTheme.typography.body1)
-            Text("Precio Total: %.2f".format(totalAmount), style = MaterialTheme.typography.body1)
+           // Text("Propina: %.2f".format(tipAmount), style = MaterialTheme.typography.body1)
+           // Text("Precio Total: %.2f".format(totalAmount), style = MaterialTheme.typography.body1)
         }
     }
 }
 
-@Preview(showBackground = true)
+@Composable
+fun TipCalculatorTheme(content: @Composable () -> Unit) {
+    TODO("Not yet implemented")
+}
+
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun DefaultPreview() {
-    TipCalculatorApp()
+   // TipCalculatorApp()
 }
