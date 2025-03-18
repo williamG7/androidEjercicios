@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="convertirr" />
+    <string name="adivina">\n</string>
+    <string name="igual">\n</string>
+    <string name="mayor" />
+    <string name="menos" />
 </resources>

@@ -12,16 +12,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.text.input.KeyboardType
 
-
-class CalcularPropina() : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            TipCalculatorApp()
-        }
-    }
-}
-
 @Composable
 fun TipCalculatorApp() {
     var menuPrice by remember { mutableStateOf("") }
@@ -99,4 +89,52 @@ fun TipCalculatorTheme(content: @Composable () -> Unit) {
 @Composable
 fun DefaultPreview() {
    // TipCalculatorApp()
+}
+
+
+
+@Composable
+fun Calcular() {
+    var total: String by remember { mutableStateOf("") }
+    var porcentaje: String by remember { mutableStateOf("") }
+    var calcula: Boolean by remember { mutableStateOf(false) }
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+
+        ) {
+        TextField(
+            value = total,
+            onValueChange = { total = it },
+            label = { Text(text = stringResource(R.string.total)) },
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+        )
+        TextField(
+            value = porcentaje,
+            onValueChange = { porcentaje = it },
+            label = { Text(text = stringResource(R.string.porcentaje)) },
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+        )
+        Button(onClick = { calcula = true }) {
+            Text("Calcular")
+        }
+        if (calcula) {
+            Text(
+                text = stringResource(R.string.texto1) + total.toDouble() * (porcentaje.toDouble() / 100),
+                textAlign = TextAlign.Center
+            )
+            Text(
+                text = stringResource(R.string.montoTotal) + (total.toDouble() * (porcentaje.toDouble() / 100) + total.toDouble()),
+                textAlign = TextAlign.Center
+            )
+        }
+        if (calcula && porcentaje == "100") {
+            Image(
+                painter = painterResource(id = R.drawable.baixa),
+                contentDescription = "PIPIPI"
+            )
+            Text(text = stringResource(R.string.camarero), fontWeight = FontWeight.Bold)
+        }
+    }
 }
