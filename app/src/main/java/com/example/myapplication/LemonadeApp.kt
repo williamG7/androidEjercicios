@@ -26,8 +26,8 @@ import kotlin.uuid.Uuid.Companion.random
 @Composable
 fun LimonadaApp() {
     var fase by remember { mutableStateOf(1) }
-    var clicsNecessaris: Int by remember { mutableStateOf(random()) }
-    var clicsActuals by remember { mutableStateOf(0) }
+    var clicksNesecarios by remember { mutableStateOf(random()) }
+    var clicksActuales by remember { mutableStateOf(0) }
 
     val (text, imatge) = when (fase) {
         1 -> Pair("Coger un limon", R.drawable.limonero)
@@ -52,16 +52,16 @@ fun LimonadaApp() {
                     when (fase) {
                         1 -> fase = 2
                         2 -> {
-                            clicsActuals++
-                            if (clicsActuals >= clicsNecessaris) {
+                            clicksActuales++
+                            if (clicksActuales >=  clicksNesecarios) {
                                 fase = 3
-                                clicsActuals = 0
+                                clicksActuales = 0
                             }
                         }
                         3 -> fase = 4
                         4 -> {
                             fase = 1
-                            clicsNecessaris = Random.nextInt(2, 5)
+                            clicksNesecarios = Random.nextInt(2, 5)
                         }
                     }
                 }

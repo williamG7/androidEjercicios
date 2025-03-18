@@ -5,4 +5,9 @@
     <string name="igual">\n</string>
     <string name="mayor" />
     <string name="menos" />
+    <string name="total" />
+    <string name="porcentaje" />
+    <string name="texto1" />
+    <string name="montoTotal" />
+    <string name="camarero" />
 </resources>
