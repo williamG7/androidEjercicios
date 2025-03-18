@@ -30,8 +30,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun conversiones() {
-    var botoncito by remember { mutableStateOf(false) }
+fun ConversionesUnidades() {
+    var boton by remember { mutableStateOf(false) }
     var numero by remember { mutableStateOf("") }
     var textoSelecionado by remember { mutableStateOf("") }
     var expandir by remember { mutableStateOf(false) }
@@ -115,12 +115,12 @@ fun conversiones() {
             } else {
                 "Número inválido"
             }
-            botoncito = true
+            boton = true
         }) {
             Text("Calcular")
         }
 
-        if (botoncito) {
+        if (boton) {
             Text(text = "Resultado: $resultado", fontSize = 20.sp, color = Color.White)
         }
     }

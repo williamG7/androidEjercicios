@@ -23,8 +23,8 @@ import androidx.compose.ui.unit.dp
 import kotlin.random.Random
 
 @Composable
-fun Secreto() {
-    var botoncito by remember { mutableStateOf(false) }
+fun NumeroSecreto() {
+    var boton by remember { mutableStateOf(false) }
     var adivinacion by remember { mutableStateOf("") }
     var numeroSecreto by remember { mutableStateOf(random()) }
     var contador by remember { mutableStateOf(0) }
@@ -47,13 +47,13 @@ fun Secreto() {
             label = { Text(text = stringResource(R.string.adivina)) }
         )
         Button(onClick = {
-            botoncito = true
+            boton = true
             contador++
         }) {
             Text("Adivina")
         }
         Button(onClick = {
-            botoncito = false
+            boton = false
             contador = 0
             numeroSecreto = random()
         }) {
@@ -62,7 +62,7 @@ fun Secreto() {
 
         Text(text = "Intentos: $contador", color = Color.White)
 
-        if (botoncito) {
+        if (boton) {
             val numeroAdivinado = adivinacion.toIntOrNull()
             if (numeroAdivinado != null) {
                 when {

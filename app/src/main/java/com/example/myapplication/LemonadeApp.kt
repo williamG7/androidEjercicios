@@ -24,15 +24,15 @@ import kotlin.uuid.Uuid.Companion.random
 
 @OptIn(ExperimentalUuidApi::class)
 @Composable
-fun LlimonadaApp() {
+fun LimonadaApp() {
     var fase by remember { mutableStateOf(1) }
     var clicsNecessaris: Int by remember { mutableStateOf(random()) }
     var clicsActuals by remember { mutableStateOf(0) }
 
     val (text, imatge) = when (fase) {
-        1 -> Pair("Agafa una llimona", R.drawable.limonero)
-        2 -> Pair("Esprem la llimona", R.drawable.limon)
-        3 -> Pair("Beu-te-la", R.drawable.limonadas)
+        1 -> Pair("Coger un limon", R.drawable.limonero)
+        2 -> Pair("Exprimir un limon", R.drawable.limon)
+        3 -> Pair("Bebela", R.drawable.limonadas)
         else -> Pair("Comenzar de nuevo ", R.drawable.baso)
     }
 
@@ -58,7 +58,6 @@ fun LlimonadaApp() {
                                 clicsActuals = 0
                             }
                         }
-
                         3 -> fase = 4
                         4 -> {
                             fase = 1

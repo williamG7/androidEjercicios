@@ -49,7 +49,13 @@ class MainActivity : ComponentActivity() {
                     )
                     TipCalculatorApp()
 
-                    Secreto()
+                    NumeroSecreto()
+
+                    LimonadaApp()
+
+                    ConversionesUnidades()
+
+                    DiceRollerApp()
 
 
                 }

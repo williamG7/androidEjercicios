@@ -27,19 +27,9 @@ import java.util.Calendar
 //(IMC<18,5), normal (18,5>IMC<24,9), sobrepeso (25<IMC<50) u obesidad (50<IMC)
 
 
-class calcularIMC(): ComponentActivity() {
-    @RequiresApi(Build.VERSION_CODES.O)
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            calculadoraIMC()
-        }
-    }
-}
-
 @RequiresApi(Build.VERSION_CODES.O)
 @Composable
-fun calculadoraIMC(){
+fun CalculadoraIMC(){
     var nombreUsuario by remember{ mutableStateOf("") }
     var anyoNacimiento by remember{ mutableStateOf("") }
     var altura  by remember { mutableStateOf("") }

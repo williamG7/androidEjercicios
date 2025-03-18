@@ -1,8 +1,5 @@
 package com.example.myapplication
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -80,10 +77,7 @@ fun TipCalculatorApp() {
     }
 }
 
-@Composable
-fun TipCalculatorTheme(content: @Composable () -> Unit) {
-    TODO("Not yet implemented")
-}
+
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
