@@ -10,4 +10,13 @@
     <string name="texto1" />
     <string name="montoTotal" />
     <string name="camarero" />
+    <string name="imc" />
+    <string name="gordo" />
+    <string name="sobrePeso" />
+    <string name="normal" />
+    <string name="insuficiente" />
+    <string name="peso" />
+    <string name="dimeNombre" />
+    <string name="nacimiento" />
+    <string name="altura" />
 </resources>

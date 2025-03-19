@@ -32,7 +32,7 @@ fun LimonadaApp() {
     val (text, imatge) = when (fase) {
         1 -> Pair("Coger un limon", R.drawable.limonero)
         2 -> Pair("Exprimir un limon", R.drawable.limon)
-        3 -> Pair("Bebela", R.drawable.limonadas)
+        3 -> Pair("Bebela", R.drawable.limon_drink)
         else -> Pair("Comenzar de nuevo ", R.drawable.baso)
     }
 
