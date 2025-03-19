@@ -26,56 +26,19 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MyApplicationTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 
-                    Greeting(name = "word", modifier = Modifier.padding(innerPadding))
+                CalcularPropina()
 
-                    Ejercicio3(name = "3", modifier = Modifier.padding(innerPadding).toString())
+                NumeroSecreto()
 
-                    Ejercicio4(name = "4", modifier = Modifier.padding(innerPadding))
+                LimonadaApp()
 
-                    CalcularPropina()
+                ConversionesUnidades()
 
-                    NumeroSecreto()
+                DiceRollerApp()
 
-                    LimonadaApp()
-
-                    ConversionesUnidades()
-
-                    DiceRollerApp()
-                }
             }
         }
-    }
-}
-
-@OptIn(InternalCoroutinesApi::class)
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    ConstraintLayout(modifier.fillMaxSize()) {
-        val (boxRed, boxYellow, boxGreen, boxCyan, boxMagenta) = createRefs()
-        Box(modifier = Modifier.size(120.dp).background(Color.Red).constrainAs(boxRed){
-            top.linkTo(parent.top)
-            start.linkTo(parent.start)
-            bottom.linkTo(parent.bottom)
-            end.linkTo(parent.end)
-        })
-        Box(modifier = Modifier.size(120.dp).background(Color.Yellow).constrainAs(boxYellow){
-            start.linkTo(boxRed.start)
-            bottom.linkTo(boxRed.top)
-        })
-        Box(modifier = Modifier.size(120.dp).background(Color.Green).constrainAs(boxGreen){
-            start.linkTo(boxRed.start)
-            top.linkTo(boxRed.bottom)
-        })
-        Box(modifier = Modifier.size(120.dp).background(Color.Cyan).constrainAs(boxCyan){
-            top.linkTo(boxRed.top)
-            end.linkTo(boxRed.start)
-        })
-        Box(modifier = Modifier.size(120.dp).background(Color.Magenta).constrainAs(boxMagenta){
-            top.linkTo(boxRed.top)
-            start.linkTo(boxRed.end)
-        })
     }
 }
 
@@ -84,8 +47,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     MyApplicationTheme {
-        Greeting("Android")
-        Ejercicio3("4","completado")
-        Ejercicio4("compeltado")
+
     }
 }

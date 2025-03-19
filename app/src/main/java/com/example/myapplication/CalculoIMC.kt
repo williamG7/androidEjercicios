@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.RequiresApi
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
@@ -102,12 +103,7 @@ fun IMC() {
     var altura: String by remember { mutableStateOf("") }
     var peso: String by remember { mutableStateOf("") }
     var calculo: String by remember { mutableStateOf("") }
-    Image(
-        painter = painterResource(id = R.drawable.ddb93982c3196c10fa92396e3ac7a5b5),
-        contentDescription = "PIPIPI",
-        Modifier.fillMaxSize(),
-        contentScale = ContentScale.FillBounds
-    )
+
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
