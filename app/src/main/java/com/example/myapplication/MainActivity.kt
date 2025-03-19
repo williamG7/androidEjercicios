@@ -17,9 +17,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyApplicationTheme {
 
-               LimonadaApp()
-
-
+               ConversionesUnidades()
 
             }
         }
@@ -31,7 +29,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     MyApplicationTheme {
-        NumeroSecreto()
+        ConversionesUnidades()
 
     }
 }
