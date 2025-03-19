@@ -53,7 +53,7 @@ fun LimonadaApp() {
                         1 -> fase = 2
                         2 -> {
                             clicksActuales++
-                            if (clicksActuales >=  clicksNesecarios) {
+                            if (clicksActuales.toString() >=  clicksNesecarios.toString()) {
                                 fase = 3
                                 clicksActuales = 0
                             }
@@ -61,7 +61,7 @@ fun LimonadaApp() {
                         3 -> fase = 4
                         4 -> {
                             fase = 1
-                            clicksNesecarios = Random.nextInt(2, 5)
+                            clicksNesecarios = random()
                         }
                     }
                 }
